@@ -1,10 +1,13 @@
 /*Write a function that takes in two parameters and calculates the sum of numbers between the two paramenters*/
 
-function sumBetween(min, max) {
-    let sum = 0;
-    for (let i = min ; i <= max; i++) {
-      sum += i;
+const sumBetween = (num1, num2)=>{
+let smallNumber= num2>num1?num1:num2 ;
+let largeNumber=num2>num1?num2:num1 ;
+   let arr = [];
+
+    for (var i =smallNumber; i <= largeNumber; i++) {
+      arr.push(i);
     }
-    return sum;
-  }
-  console.log(sumBetween(0,2))
+    return arr.reduce((s, c)=> s+c);
+  };
+  console.log(sumBetween(2,0))
