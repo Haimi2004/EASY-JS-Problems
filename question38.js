@@ -9,8 +9,11 @@ const employeelist =[
     {name:"Bula", age:23, email:"email@hotmail.com"},
 ];
 
-
+/*
 function removeObjectsWithoutEmail(employeelist) {
     return employeelist.filter(obj => obj.email);
   }
-console.log(removeObjectsWithoutEmail(email))
+console.log(removeObjectsWithoutEmail(email))*/
+
+const sanitizeEmail = (arr) =>arr.filter((obj) => obj.email);
+console.log(sanitizeEmail(employeelist))
