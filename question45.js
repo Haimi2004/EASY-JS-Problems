@@ -14,7 +14,9 @@ const employeelist = [
     { name: "Deme", age: 17, email:"dema@gmail.com"  },
   ];
  
-  employeelist.forEach(function(employeelist) {
-    console.log(employeelist.name);
+  
 
-  });
+  const nameOnly = (arr) => arr.map((person) => person.name);
+
+console.log(nameOnly(employeelist));
+

@@ -24,5 +24,5 @@ function formatEmployeelist(employeelist) {
     });
   }
 
-  console.log(formatEmployeelist(employeelist))
+  console.log(formatEmployeelist(employeelist));
   

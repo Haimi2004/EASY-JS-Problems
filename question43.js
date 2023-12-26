@@ -12,32 +12,10 @@ const employeelist = [
     { name: "Bula", age: 33, email:"bula@gmail.com"  },
     { name: "Deme", age: 17, email:"dema@gmail.com"  },
   ];
-  /*
-  for(let i = 0; i < employeelist.length; i++) {
-       console.log(employeelist[i]);
-    }
-    */
-    
-    
-    //forEach
-    /*
-    employeelist.forEach(function(employeelist) {
-      console.log(employeelist.age);
+  const pickTheOldest = (arr) =>
+  arr.sort((a, b) => a.age - b.age)[arr.length - 1];
+console.log(pickTheOldest(employeelist));
+
   
-    });
-    
-    */
 
-
-    const inventory = [
-      { name: "apples", quantity: 2 },
-      { name: "bananas", quantity: 0 },
-      { name: "cherries", quantity: 5 },
-    ];
-    
-    function isCherries(fruit) {
-      return fruit.quantity === 10;
-    }
-    
-    console.log(inventory.find(isCherries));
 

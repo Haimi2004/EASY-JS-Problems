@@ -12,3 +12,6 @@ const employeelist = [
     { name: "Bula", age: 33, email:"bula@gmail.com"  },
     { name: "Deme", age: 17, email:"dema@gmail.com"  },
   ];
+
+  const pickTheYoungest = (arr) => arr.sort((a, b) => a.age - b.age)[0];
+console.log(pickTheYoungest(employeelist));

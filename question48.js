@@ -12,11 +12,14 @@ const employeelist = [
   ];
 
 
-function employeeName(employeelist) {
-    return employeelist.map(employeelist => {
-      const name = employeelist.name ;
-      return `${employeelist.name} `;
-    });
-  }
-
-  console.log(employeeName(employeelist))
+  const sortByName = (employeelist) =>
+  employeelist.sort((a, b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (b.name > a.name) {
+      return -1;
+    }
+    return 0;
+  });
+console.log(sortByName(employeelist));

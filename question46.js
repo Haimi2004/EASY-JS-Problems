@@ -16,3 +16,14 @@ const employeelist = [
     { name: "Deme", age: 17, email:"dema@gmail.com"  },
   ];
  
+  const isAdult = (arr) =>
+  arr.map((person) => {
+    if (!person.email) {
+      delete person.email;
+      return { ...person, isAdult: person.age > 18 };
+    }
+    return { ...person, isAdult: person.age > 18 };
+  });
+
+  
+console.log(isAdult(employeelist));

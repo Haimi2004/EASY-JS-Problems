@@ -11,13 +11,14 @@ const employeelist = [
 
 
 
-function getLongestName(employeelist) {
-    let longestName = "";
-    for (let i = 0; i < name.length; i++) {
-      if (employeelist[i].name.length > longestName.length) {
-        longestName = employeelist[i].name;
-      }
+  const sortByLongestName = (employeelist) =>
+  employeelist.sort((a, b) => {
+    if (a.name.legth > b.name.length) {
+      return 1;
     }
-    return longestName;
-  }
-  console.log(getLongestName(getLongestName))
+    if (b.name.length > a.name.length) {
+      return -1;
+    }
+    return 0;
+  })[employeelist.length - 1];
+console.log(sortByLongestName(employeelist));

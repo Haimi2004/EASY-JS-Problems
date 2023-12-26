@@ -11,11 +11,5 @@ const employeelist = [
     { name: "Deme", age: 17, email:"dema@gmail.com"  },
   ];
 
-
-function employeeAge(employeelist) {
-    return employeelist.map(employeelist => {
-      const age = employeelist.age ;
-      return `${employeelist.age} `;
-    });
-  }
-  console.log(employeeAge(employeelist))
+  const sortByAge = (employeelist) => employeelist.sort((a, b) => a.age - b.age);
+  console.log(sortByAge(employeelist));

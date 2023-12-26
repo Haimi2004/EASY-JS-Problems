@@ -12,11 +12,21 @@ const employeelist = [
     { name: "Deme", age: 17, email:"dema@gmail.com"  },
   ];
  
-  function formatEmployeelist(arr) {
-    return arr.map((obj) => `${obj.name} is ${obj.age} years old and has ${obj.email}`);
-  }
-  console.log(formatEmployeelist(employeelist))
+  // function formatEmployeelist(arr) {
+  //   return arr.map((obj) => `${obj.name} is ${obj.age} years old and has ${obj.email}`);
+  // }
+  // console.log(formatEmployeelist(employeelist))
   
+  const messageWriter = (employeelist) =>
+  employeelist
+    .filter((employeelist) => employeelist.email)
+    .map(
+      (person) =>
+        `${person.name} is ${person.age} years old and ${
+          person.email ? "has email" : null
+        }`
+    );
+console.log(messageWriter(employeelist));
 
   
 

@@ -12,11 +12,7 @@ const employeelist = [
     { name: "Deme", age: 17, email:"dema@gmail.com"  },
   ];
   
-  function averageAge(people) {
-    const sum = people.reduce((total, person) => total + person.age, 0);
-    return sum / people.length;
-  }
-  
-  
-  
+  const aveAge = (arr) =>
+  arr.reduce((sum, person) => sum + Number(person.age), 0) / arr.length;
+console.log(aveAge(employeelist));
  
